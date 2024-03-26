@@ -1010,6 +1010,15 @@ ul.icons li a:active {
     text-align: center;
 }
 
+.skill span{
+
+}
+.skill img {
+    width:100%; /* Set the width of the images */
+    height: 50%; /* Set the height of the images */
+    object-fit: contain; /* Maintain aspect ratio and cover the entire container */
+    border-radius: 8px; /* Add rounded corners to the images */
+}
 
 
 
@@ -1018,3 +1027,67 @@ ul.icons li a:active {
     height: 20em;
     border: none;
 }
+/* Work navigation */
+.buttons {
+    width: 100%;
+}
+
+#work nav ul {
+    display: flex;
+    margin-bottom: 0;
+    list-style: none;
+    padding-left: 0;
+    border-radius: 4px;
+}
+
+#work nav ul li {
+    padding-left: 0;
+    border-left: solid 1px #ffffff;
+    width: 78px; /* Adjust width for desktop */
+}
+
+#work nav ul li:first-child {
+    border-left: 0;
+}
+
+#work nav ul li a {
+    display: block;
+    min-width: 5rem;
+    height: 2.75rem;
+    line-height: 2.75rem;
+    padding: 0 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    font-size: 0.8rem;
+    border-bottom: 0;
+}
+
+#work nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.075);
+}
+
+#work nav ul li a:active {
+    background-color: rgba(255, 255, 255, 0.175);
+}
+
+/* Make sure the third li is visible */
+#work nav ul li:nth-child(3) {
+    display: block;
+}
+
+@media screen and (max-width: 480px) {
+    .buttons {
+        /* Add any additional styling for smaller screens */
+    }
+
+    #work nav ul li {
+        width: auto; /* Adjust width for smaller screens */
+    }
+
+    #work nav ul li a {
+        min-width: auto; /* Adjust min-width for smaller screens */
+        padding: 0 0.5rem; /* Adjust padding for smaller screens */
+    }
+}
+
+
