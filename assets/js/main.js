@@ -396,3 +396,21 @@
 
 })(jQuery);
 
+const downloadButton = document.getElementById('downloadButton');
+        const pdfViewer = document.getElementById('pdfViewer');
+
+        downloadButton.addEventListener('click', () => {
+            const pdfURL = pdfViewer.getAttribute('src');
+            const filename = pdfURL.substring(pdfURL.lastIndexOf('/') + 1);
+            fetch(pdfURL)
+                .then(response => response.blob())
+                .then(blob => {
+                    const url = window.URL.createObjectURL(new Blob([blob]));
+                    const link = document.createElement('a');
+                    link.href = url;
+                    link.setAttribute('download', filename);
+                    document.body.appendChild(link);
+                    link.click();
+                    link.parentNode.removeChild(link);
+                });
+        });
