@@ -990,8 +990,10 @@ ul.icons li a:active {
 
 .skill h3 , .hobby h3{
     font-size: 20px;
-    margin-bottom: 5px;
+    margin: 10px 0;
     text-align: center;
+	min-height: 80px;
+
 }
 
 .skill i , .hobby i {
@@ -1032,16 +1034,20 @@ ul.icons li a:active {
     width: 100%;
 }
 #work nav ul {
+	position: relative;
     display: flex;
     margin-bottom: 0;
     list-style: none;
-    padding-left: 0;
+    padding:10px ;
     border-radius: 4px;
+	align-items: center;
+	align-content: center;
 }
 
 #work nav ul li {
     padding-left: 0;
     width: 78px; /* Adjust width for desktop */
+
 }
 
 #work nav ul li:first-child {
@@ -1049,6 +1055,7 @@ ul.icons li a:active {
 }
 
 #work nav ul li a {
+	position: relative;
     display: block;
     min-width: 7rem;
     height: 2.75rem;
@@ -1058,6 +1065,8 @@ ul.icons li a:active {
     letter-spacing: 0.2rem;
     font-size: 0.8rem;
     border-bottom: 0;
+	align-items: center;
+	align-content: center;
 }
 
 #work nav ul li a:hover {
